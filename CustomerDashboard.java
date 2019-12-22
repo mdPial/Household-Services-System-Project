@@ -39,6 +39,7 @@ public class CustomerDashboard extends javax.swing.JFrame {
         logout = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,6 +54,12 @@ public class CustomerDashboard extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Services");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,6 +123,16 @@ public class CustomerDashboard extends javax.swing.JFrame {
         jLabel43.setForeground(new java.awt.Color(255, 70, 0));
         jLabel43.setText("HSS");
 
+        jLabel45.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 70, 0));
+        jLabel45.setText("back");
+        jLabel45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel45MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -124,12 +141,18 @@ public class CustomerDashboard extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jLabel42))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(247, 247, 247)
-                        .addComponent(jLabel43)))
-                .addContainerGap(223, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(190, 190, 190)
+                                .addComponent(jLabel42))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(247, 247, 247)
+                                .addComponent(jLabel43)))
+                        .addGap(0, 213, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel45)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,7 +162,9 @@ public class CustomerDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel42)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel43)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,6 +191,26 @@ public class CustomerDashboard extends javax.swing.JFrame {
         jump.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_logoutMouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        Services jump = new Services();
+        jump.setVisible(true);
+        jump.pack();
+        jump.setLocationRelativeTo(null);
+        jump.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel45MouseClicked
+        // TODO add your handling code here:
+        FirstPage jump = new FirstPage();
+        jump.setVisible(true);
+        jump.pack();
+        jump.setLocationRelativeTo(null);
+        jump.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jLabel45MouseClicked
 
     /**
      * @param args the command line arguments
@@ -210,6 +255,7 @@ public class CustomerDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
